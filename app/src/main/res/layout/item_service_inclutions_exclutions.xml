@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_10dp">
+
+    <ImageView
+        android:id="@+id/imageInclutionsExclutionCorrect"
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:visibility="gone"
+        android:background="@drawable/ic_check_mark_button" />
+
+    <ImageView
+        android:id="@+id/imageInclutionsExclutionWrong"
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:background="@drawable/ic_stop_road_sign"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvInclutionsExclutionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:fontFamily="@font/helvetica_neue"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:text="Customised single usage facial kits" />
+</RelativeLayout>

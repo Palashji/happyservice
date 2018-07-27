@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_200dp"
+                android:layout_height="@dimen/dimen_140dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@drawable/refer_img" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="center"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:fontFamily="@font/helvetica_neue"
+                android:text="@string/terms_condition_apply"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:gravity="center"
+                android:text="Your referral code"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvReferCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@color/white"
+                android:padding="@dimen/dimen_10dp"
+                android:text="soh342"
+                android:fontFamily="@font/helvetica_neue"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/tvShareCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:drawableLeft="@drawable/ic_share"
+                android:drawablePadding="@dimen/dimen_2dp"
+                android:text="INVITE"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/tvHowItWorks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/how_it_works"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/helvetica_neue"
+                android:textSize="@dimen/text_size_small" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

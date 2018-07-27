@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnBook"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:layout_below="@+id/tool_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:text="Select Date"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_date"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:text="Date"
+                    android:textSize="@dimen/text_size_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:text="Select Time"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <EditText
+                    android:id="@+id/etTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_time"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:text="Time"
+                    android:textSize="@dimen/text_size_small" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/etBuildingNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="@string/building_flat_no_building_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Landmark"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/etArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Area"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="City"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Address"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="center"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                android:textColor="@color/textColorSecondry"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Book"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal" />
+</RelativeLayout>

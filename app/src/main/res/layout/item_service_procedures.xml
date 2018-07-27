@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_10dp">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+    <TextView
+        android:id="@+id/tvProcedureTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/helvetica_neue"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:text="Customised single usage facial kits" />
+</RelativeLayout>

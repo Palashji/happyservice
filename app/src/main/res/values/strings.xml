@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Happy Service</string>
+    <string name="facebook_app_id">199340184003099</string>
+    <string name="fb_login_protocol_scheme">fb199340184003099</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="no_internet">No Internet!</string>
+    <string name="inclusions_exclusions"><![CDATA[Inclusions & Exclusions]]></string>
+    <string name="terms_condition_apply"><![CDATA[Terms & Condition apply]]></string>
+    <string name="how_it_works"><u>How it works?</u></string>
+    <string name="faq_terms"><![CDATA[FAQ & Terms]]></string>
+    <string name="booking_date_time"><![CDATA[Booking Date & Time]]></string>
+    <string name="location">Location</string>
+    <string name="rating_review">Rating &amp; Review</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="sorry_not_available_please_try_other">Sorry!\nNot Available.</string>
+    <string name="sorry_service_not_available_in_your_city">Sorry!\nService Not Available in your City.\nWe will start service in your City shortly.</string>
+    <string name="sorry_service_available_but_not_now_in_your_city">Sorry!\nService Available in your City but We are unable to find our Partner in your City, Try after some time.</string>
+    <string name="building_flat_no_building_name"><![CDATA[Building / Flat No & Building Name]]></string>
+</resources>

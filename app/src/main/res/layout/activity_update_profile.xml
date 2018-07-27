@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/dimen_80dp"
+                android:layout_height="@dimen/dimen_80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:src="@drawable/ic_user"
+                app:civ_border_color="@color/textColorSecondry"
+                app:civ_border_width="@dimen/dimen_1dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/editMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Mobile Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <EditText
+                    android:id="@+id/editAlternetMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Mobile Number"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnUpdateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/btn_shap"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="Update Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

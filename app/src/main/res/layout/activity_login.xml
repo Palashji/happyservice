@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:text="Login"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp">
+
+                <EditText
+                    android:id="@+id/editMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp">
+
+                <EditText
+                    android:id="@+id/editPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password  "
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Forgot Password?"
+                android:fontFamily="@font/helvetica_neue"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:background="@drawable/btn_shap"
+                android:text="Login"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/textLoginWithOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:fontFamily="@font/helvetica_neue"
+                android:text="Login With OTP"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:src="@drawable/plus" />
+
+</RelativeLayout>

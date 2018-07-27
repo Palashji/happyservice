@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_50dp"
+            android:layout_marginRight="@dimen/dimen_50dp"
+            android:layout_marginTop="@dimen/dimen_70dp"
+            android:fontFamily="@font/helvetica_neue_bold"
+            android:gravity="center"
+            android:text="Hi, nice to meet you!"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/dimen_24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_50dp"
+            android:layout_marginRight="@dimen/dimen_50dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:gravity="center"
+            android:text="Tell us your location to show you the service around you"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/dimen_20dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_50dp"
+            android:layout_marginRight="@dimen/dimen_50dp"
+            android:layout_marginTop="@dimen/dimen_50dp"
+            android:background="@drawable/btn_shape_active"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_25dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:background="@drawable/ic_current_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_shape_active"
+                android:text="Use Currect Location"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:gravity="center"
+            android:text="We will only access your location while you are using the app to improve your experience."
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/dimen_12dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSelectYourCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dimen_50dp"
+        android:layout_marginRight="@dimen/dimen_50dp"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:gravity="center"
+        android:text="Or, Select your City"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/dimen_20dp" />
+
+</RelativeLayout>

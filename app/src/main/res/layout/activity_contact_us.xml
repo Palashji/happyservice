@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/tool_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="center"
+                android:text="Call to speak to our team"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_small" />
+
+            <Button
+                android:id="@+id/btnCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:background="@drawable/btn_blank_shap"
+                android:drawableLeft="@drawable/ic_call"
+                android:drawablePadding="@dimen/text_small_padding"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dimen_30dp"
+                android:paddingRight="@dimen/dimen_30dp"
+                android:text="Call"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:background="@drawable/tv_shape"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="center"
+                android:text="OR"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="center"
+                android:text="Please write to us for any queries"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_small" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Phone Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Email Address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etQuery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue"
+                    android:hint="Query"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal" />
+</RelativeLayout>

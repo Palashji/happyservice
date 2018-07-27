@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvContactUs"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/helvetica_neue"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dimen_15dp"
+            android:text="Contact Us"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvFaqTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dimen_15dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="@string/faq_terms"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_neue"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dimen_15dp"
+            android:text="Privacy Policy"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvAboutUS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dimen_15dp"
+            android:text="About Us"
+            android:fontFamily="@font/helvetica_neue"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/colorAccent" />
+    </LinearLayout>
+
+</RelativeLayout>

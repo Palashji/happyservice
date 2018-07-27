@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_sad" />
+
+    <TextView
+        android:id="@+id/textHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center"
+        android:text="@string/sorry_service_not_available_in_your_city"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dimen_4dp"
+        android:text="Ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+</LinearLayout>

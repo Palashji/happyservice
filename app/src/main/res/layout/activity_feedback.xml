@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/tool_bar"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/jobImage"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_accept" />
+
+            <TextView
+                android:id="@+id/tvServiceStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobImage"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:fontFamily="@font/helvetica_neue"
+                android:gravity="center"
+                android:text="Complete"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xlargel" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="Rating"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Base.Widget.AppCompat.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:max="5"
+            android:stepSize="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="Comment"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <EditText
+            android:id="@+id/etComment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_80dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/feedback_shape"
+            android:fontFamily="@font/helvetica_neue" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:gravity="center"
+            android:text="Please give Rating, It will help Vendor to provide better services in future."
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/helvetica_neue_bold"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal" />
+</RelativeLayout>

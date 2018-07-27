@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dimen_2dp"
+    android:background="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    app:civ_border_color="@color/textColorSecondry"
+                    app:civ_border_width="@dimen/dimen_1dp"
+                    android:id="@+id/userImage"
+                    android:layout_width="@dimen/dimen_50dp"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:background="@drawable/ic_user" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@+id/userImage"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCustomerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica_neue_bold"
+                        android:singleLine="true"
+                        android:text="Service Name"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RatingBar
+                        android:id="@+id/rating"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="0" />
+
+                    <TextView
+                        android:id="@+id/tvReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/helvetica_neue"
+                        android:text="Review"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

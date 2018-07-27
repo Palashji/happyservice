@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inner_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dimen_10dp">
+
+            <TextView
+                android:id="@+id/tvServiceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="Service Name"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/btnHire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/text_small_padding"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_shape_active"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:text="Hire"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <include layout="@layout/recycler_view" />
+
+    <LinearLayout
+        android:id="@+id/inpute_TextLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/text_inpute_layout"
+            layout="@layout/text_input" />
+    </LinearLayout>
+</LinearLayout>

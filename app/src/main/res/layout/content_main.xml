@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/vp_sliderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_180dp"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:fontFamily="@font/helvetica_neue_bold"
+                    android:text="What do you need to get done?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_normal" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleViewServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:nestedScrollingEnabled="false" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:fontFamily="@font/helvetica_neue_bold"
+                    android:text="Home Needs"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="visible" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleViewHomeNeeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:nestedScrollingEnabled="false" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:fontFamily="@font/helvetica_neue_bold"
+                    android:text="Appliances"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="visible" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleViewAppliances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:nestedScrollingEnabled="false" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_bold"
+                        android:padding="@dimen/text_small_padding"
+                        android:text="Why Choose Us?"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/textColorPrimary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:fontFamily="@font/helvetica_neue"
+                        android:padding="@dimen/text_small_padding"
+                        android:text="100% satisfaction guaranteed or free re-word"
+                        android:textColor="@color/textColorSecondry"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:fontFamily="@font/helvetica_neue"
+                        android:padding="@dimen/text_small_padding"
+                        android:text="Experianced &amp; Trained Professionals"
+                        android:textColor="@color/textColorSecondry"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:fontFamily="@font/helvetica_neue"
+                        android:padding="@dimen/text_small_padding"
+                        android:text="Eco-friendly chemicals"
+                        android:textColor="@color/textColorSecondry"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:fontFamily="@font/helvetica_neue"
+                        android:padding="@dimen/text_small_padding"
+                        android:text="Insurance of the work done"
+                        android:textColor="@color/textColorSecondry"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:fontFamily="@font/helvetica_neue"
+                        android:padding="@dimen/text_small_padding"
+                        android:text="Guaranteed satisfaction"
+                        android:textColor="@color/textColorSecondry"
+                        android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

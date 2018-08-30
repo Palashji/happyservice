@@ -36,6 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getContentResId());
     }
 
+
     protected void setToolbarWithBackButton(String title) {
         initToolbar();
         getSupportActionBar().setTitle(title);

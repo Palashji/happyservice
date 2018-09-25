@@ -13,10 +13,8 @@ import android.widget.TextView;
 
 import com.bluewebspark.happyservice.R;
 import com.bluewebspark.happyservice.adapter.HistoryAdapter;
-import com.bluewebspark.happyservice.adapter.OngoingAdapter;
 import com.bluewebspark.happyservice.data.datahelper.UserDataHelper;
 import com.bluewebspark.happyservice.model.HistoryModel;
-import com.bluewebspark.happyservice.model.OnGoingModel;
 import com.bluewebspark.happyservice.sohel.ApiClient;
 import com.bluewebspark.happyservice.sohel.ApiInterface;
 import com.bluewebspark.happyservice.sohel.Helper;

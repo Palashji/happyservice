@@ -12,7 +12,6 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -211,7 +210,7 @@ public class ConversationActivity extends BaseActivity implements EmojiconGridFr
                                 msgArrayList.add(messages);
                             }
                             if (msgArrayList.size() > 0) {
-                                Collections.reverse(msgArrayList);
+                            //    Collections.reverse(msgArrayList);
                                 adapter_1 = new ConversationAdapter(ConversationActivity.this, msgArrayList, "1");
                                 mRecyclerView.setAdapter(adapter_1);
                             }
@@ -291,6 +290,7 @@ public class ConversationActivity extends BaseActivity implements EmojiconGridFr
     @Override
     public void onEmojiconBackspaceClicked(View v) {
         EmojiconsFragment.backspace(editEmojicon);
+
     }
 
     @Override

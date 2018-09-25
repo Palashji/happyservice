@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/tvLocation"
-        android:singleLine="true"
-        android:ellipsize="end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_20dp"
         android:drawableLeft="@drawable/ic_location"
+        android:ellipsize="end"
         android:fontFamily="@font/helvetica_neue"
         android:gravity="center_vertical"
+        android:singleLine="true"
         android:textColor="@color/textColorSecondry"
         android:textSize="@dimen/text_size_normal" />
 
@@ -32,10 +32,10 @@
         android:id="@+id/tvNamae"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4dp"
         android:fontFamily="@font/helvetica_neue_bold"
         android:gravity="center"
         android:text="Hi User"
-        android:layout_marginTop="@dimen/dimen_4dp"
         android:textColor="@color/textColorPrimary"
         android:textSize="@dimen/text_size_normal" />
 

@@ -43,7 +43,6 @@ import com.bluewebspark.happyservice.adapter.HomeNeedsAdapter;
 import com.bluewebspark.happyservice.adapter.SliderPagerAdapter;
 import com.bluewebspark.happyservice.data.datahelper.UserDataHelper;
 import com.bluewebspark.happyservice.model.CategoryModel;
-import com.bluewebspark.happyservice.model.HistoryModel;
 import com.bluewebspark.happyservice.model.HomeNeedsModel;
 import com.bluewebspark.happyservice.model.ServicesModel;
 import com.bluewebspark.happyservice.sohel.ApiClient;

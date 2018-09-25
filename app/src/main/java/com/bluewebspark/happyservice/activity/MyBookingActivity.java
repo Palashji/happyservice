@@ -11,10 +11,10 @@ import android.support.v7.widget.Toolbar;
 import com.bluewebspark.happyservice.R;
 import com.bluewebspark.happyservice.fragment.OnGoingFragment;
 import com.bluewebspark.happyservice.fragment.HistoryFragment;
+import com.bluewebspark.happyservice.fragment.OpenFragment;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -49,6 +49,8 @@ public class MyBookingActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        adapter.addFrag(new OpenFragment(), "Open");
         adapter.addFrag(new OnGoingFragment(), "OnGoing");
         adapter.addFrag(new HistoryFragment(), "History");
         viewPager.setAdapter(adapter);

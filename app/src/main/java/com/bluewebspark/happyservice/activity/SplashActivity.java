@@ -1,6 +1,5 @@
 package com.bluewebspark.happyservice.activity;
 
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
@@ -105,7 +104,7 @@ public class SplashActivity extends AppCompatActivity {
 //                            for (String key : getIntent().getExtras().keySet()) {
 
                             String action_destination = getIntent().getStringExtra("action_destination");
-
+/*
                             switch (action_destination) {
                                 case "chatMessage":
                                     messageBY = getIntent().getStringExtra("messageBY");
@@ -142,7 +141,8 @@ public class SplashActivity extends AppCompatActivity {
                                     S.I(SplashActivity.this, MainActivity.class, null);
                                     break;
                             }
-
+*/
+                            S.I(SplashActivity.this, MainActivity.class, null);
                                 /*if (key.equals("action_destination")) {
                                     if (value.equals("chatMessage")) {
 
@@ -159,6 +159,7 @@ public class SplashActivity extends AppCompatActivity {
                         S.I(SplashActivity.this, GetOtpActivity.class, null);
                         finish();
                     }
+
                 }
             }, SPLASH_TIME_OUT);
         } else {

@@ -94,8 +94,8 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
                 return new ConversationAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_message_own, parent, false));
             case TYPE_OPPONENT_MESSAGE:
                 return new ConversationAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_message_opponent, parent, false));
-            /*case TYPE_REQUEST_MESSAGE:
-                return new ConversationAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.presence_message, parent, false));*/
+            case TYPE_REQUEST_MESSAGE:
+                return new ConversationAdapter.MyViewHolder(LayoutInflater.from(context).inflate(R.layout.presence_message, parent, false));
             default:
                 return null;
         }

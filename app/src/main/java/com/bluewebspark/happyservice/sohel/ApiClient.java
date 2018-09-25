@@ -8,7 +8,7 @@ import retrofit2.Retrofit;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "http://bwsproduction.com/happyservice/index.php/api/";
+    private static final String BASE_URL = "http://happyservice.in/index.php/api/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {

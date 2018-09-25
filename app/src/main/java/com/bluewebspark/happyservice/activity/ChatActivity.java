@@ -9,17 +9,14 @@ import com.bluewebspark.happyservice.R;
 import com.bluewebspark.happyservice.adapter.ChatAdapter;
 import com.bluewebspark.happyservice.data.datahelper.UserDataHelper;
 import com.bluewebspark.happyservice.model.ChatModel;
-import com.bluewebspark.happyservice.model.RecentChatModel;
 import com.bluewebspark.happyservice.sohel.ApiClient;
 import com.bluewebspark.happyservice.sohel.ApiInterface;
 import com.bluewebspark.happyservice.sohel.Helper;
 import com.bluewebspark.happyservice.sohel.JSONParser;
 import com.bluewebspark.happyservice.sohel.S;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 import butterknife.BindView;

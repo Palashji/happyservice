@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.widget.Toolbar;
-import android.text.style.UpdateAppearance;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +21,6 @@ import com.bluewebspark.happyservice.sohel.Helper;
 import com.bluewebspark.happyservice.sohel.JSONParser;
 import com.bluewebspark.happyservice.sohel.S;
 import com.bluewebspark.happyservice.sohel.UserAccount;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;
@@ -87,6 +85,7 @@ public class UpdateProfileActivity extends BaseActivity {
             public void onClick(View v) {
                 if (UserAccount.isEmpty(editName)) {
                     updateProfile();
+
                 }
             }
         });
@@ -180,6 +179,7 @@ public class UpdateProfileActivity extends BaseActivity {
                 } else {
                     S.T(UpdateProfileActivity.this, "Try after some time.");
                 }
+
             }
         });
     }

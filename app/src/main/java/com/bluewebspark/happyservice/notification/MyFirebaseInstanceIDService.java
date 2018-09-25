@@ -35,14 +35,16 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     }
 
     private void UpdateFCM_ID() {
-        new JSONParser(this).parseRetrofitRequest(ApiClient.getClient().create(ApiInterface.class).updateFcmID(
-                UserDataHelper.getInstance().getUserDataModel().get(0).getUserId(),
-                FirebaseInstanceId.getInstance().getToken()
-        ), new Helper() {
-            @Override
-            public void backResponse(String response) {
-                S.E("update FCM ID response : " + response);
-            }
-        });
+        if (UserDataHelper.getInstance().getUserDataModel().size() > 0) {
+            new JSONParser(this).parseRetrofitRequest(ApiClient.getClient().create(ApiInterface.class).updateFcmID(
+                    UserDataHelper.getInstance().getUserDataModel().get(0).getUserId(),
+                    FirebaseInstanceId.getInstance().getToken()
+            ), new Helper() {
+                @Override
+                public void backResponse(String response) {
+                    S.E("update FCM ID response : " + response);
+                }
+            });
+        }
     }
 }

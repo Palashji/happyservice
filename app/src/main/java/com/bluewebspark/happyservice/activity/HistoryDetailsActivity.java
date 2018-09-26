@@ -172,6 +172,7 @@ public class HistoryDetailsActivity extends BaseActivity implements SwipeRefresh
                                 bookingsVendorModel.setVendorStatus(jsonVendor.getString("vendorStatus"));
                                 arrayListVendor.add(bookingsVendorModel);
                             }
+
                             /*if (arrayListVendor.size() > 0) {
                                 recycleviewVendorList.setVisibility(View.VISIBLE);
                                 tvNoData.setVisibility(View.GONE);

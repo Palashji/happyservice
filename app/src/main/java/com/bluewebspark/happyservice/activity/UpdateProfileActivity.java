@@ -199,4 +199,5 @@ public class UpdateProfileActivity extends BaseActivity {
             profile_image.setImageBitmap(imageBitmap);
         }
     }
+
 }

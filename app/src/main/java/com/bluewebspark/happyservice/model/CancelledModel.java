@@ -4,7 +4,7 @@ package com.bluewebspark.happyservice.model;
  * Created by abc on 22-Mar-18.
  */
 
-public class HistoryModel {
+public class CancelledModel {
 
     /**
      * requestID : 4

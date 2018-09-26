@@ -3,6 +3,7 @@ package com.bluewebspark.happyservice.activity;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -14,13 +15,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TimePicker;
 
 import com.bluewebspark.happyservice.R;
 import com.bluewebspark.happyservice.sohel.S;
+import com.bluewebspark.happyservice.sohel.SavedData;
 import com.bluewebspark.happyservice.sohel.UserAccount;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
@@ -58,6 +62,8 @@ public class BookingActivity extends BaseActivity implements DatePickerDialog.On
     EditText etLandmark;
     @BindView(R.id.etAddress)
     EditText etAddress;
+    @BindView(R.id.btnEdit)
+    ImageView btnEdit;
 
     private String price;
     private String service_id;
@@ -109,6 +115,14 @@ public class BookingActivity extends BaseActivity implements DatePickerDialog.On
                 datePickerDialog.setMinDate(calendar);
                 Log.e("setMinDate", " == " + calendar.toString());
                 datePickerDialog.show(getFragmentManager(), "Date Picker");
+            }
+        });
+
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BookingActivity.this, SearchPlacesActivity.class);
+                startActivityForResult(intent, 1);
             }
         });
 
@@ -260,5 +274,52 @@ public class BookingActivity extends BaseActivity implements DatePickerDialog.On
             etDate.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
             etTime.setText("Time");
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if (data != null) {
+                LatLng latLng = getLocationFromAddress(data.getStringExtra("address"));
+                lat = latLng.latitude;
+                lng = latLng.longitude;
+
+                Geocoder geocoder = new Geocoder(BookingActivity.this, Locale.getDefault());
+                try {
+                    List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+                    address = addresses.get(0).getAddressLine(0);
+                    etCity.setText(addresses.get(0).getLocality());
+                    etAddress.setText(address);
+                    S.E("address : " + addresses.get(0).getAddressLine(0));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public LatLng getLocationFromAddress(String strAddress) {
+
+        Geocoder coder = new Geocoder(this);
+        List<Address> address;
+        LatLng p1 = null;
+
+        try {
+            // May throw an IOException
+            address = coder.getFromLocationName(strAddress, 5);
+            if (address == null) {
+                return null;
+            }
+
+            Address location = address.get(0);
+            p1 = new LatLng(location.getLatitude(), location.getLongitude());
+
+        } catch (IOException ex) {
+
+            ex.printStackTrace();
+        }
+
+        return p1;
     }
 }

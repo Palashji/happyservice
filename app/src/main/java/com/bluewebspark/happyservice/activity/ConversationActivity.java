@@ -210,7 +210,7 @@ public class ConversationActivity extends BaseActivity implements EmojiconGridFr
                                 msgArrayList.add(messages);
                             }
                             if (msgArrayList.size() > 0) {
-                            //    Collections.reverse(msgArrayList);
+                                //    Collections.reverse(msgArrayList);
                                 adapter_1 = new ConversationAdapter(ConversationActivity.this, msgArrayList, "1");
                                 mRecyclerView.setAdapter(adapter_1);
                             }

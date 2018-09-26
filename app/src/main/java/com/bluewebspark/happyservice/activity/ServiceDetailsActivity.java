@@ -106,7 +106,7 @@ public class ServiceDetailsActivity extends BaseActivity implements CustomButton
                 if (UserDataHelper.getInstance().getUserDataModel().size() > 0) {
                     if (SavedData.getCityStatus()) {
                         Bundle bundle = new Bundle();
-                        bundle.putString("price", priceToSend);
+                        bundle.putString("price", priceToSend.replace("Rs. ", ""));
                         bundle.putString("service_id", service_id);
                         bundle.putString("service_image", service_image);
                         bundle.putString("service_name", service_name);
@@ -181,7 +181,7 @@ public class ServiceDetailsActivity extends BaseActivity implements CustomButton
                             }
 
                             tvVariationType.setText(arrayListServiceVariation.get(0).getPriceType());
-                            tvVariationPrice.setText("Rs. "+arrayListServiceVariation.get(0).getVariationPrice());
+                            tvVariationPrice.setText("Rs. " + arrayListServiceVariation.get(0).getVariationPrice());
                             tvServicePrice.setVisibility(View.GONE);
                             priceToSend = tvVariationPrice.getText().toString();
                             recycleViewVariation.setLayoutManager(new LinearLayoutManager(ServiceDetailsActivity.this, LinearLayoutManager.HORIZONTAL, false));
@@ -206,7 +206,7 @@ public class ServiceDetailsActivity extends BaseActivity implements CustomButton
     public void onButtonClick(int position, String buttonText) {
         if (buttonText.equals("btn_click")) {
             tvVariationType.setText(arrayListServiceVariation.get(position).getPriceType());
-            tvVariationPrice.setText("Rs. "+arrayListServiceVariation.get(position).getVariationPrice());
+            tvVariationPrice.setText("Rs. " + arrayListServiceVariation.get(position).getVariationPrice());
             priceToSend = tvVariationPrice.getText().toString();
         }
     }

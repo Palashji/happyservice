@@ -42,7 +42,6 @@ public class OnGoingFragment extends Fragment implements SwipeRefreshLayout.OnRe
     TextView noData;
     @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout swipe_refresh_layout;
-
     ArrayList<OnGoingModel> arrayListBooking = new ArrayList<>();
 
     @Override
@@ -59,7 +58,7 @@ public class OnGoingFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
     private void getOnGoingData() {
         swipe_refresh_layout.setRefreshing(true);
-        new JSONParser(getActivity()).parseRetrofitRequestWithautProgress(ApiClient.getClient().create(ApiInterface.class).getOnGoing(
+        new JSONParser(getActivity()).parseRetrofitRequestWithautProgress(ApiClient.getClient().create(ApiInterface.class).my_ongoing_service(
                 UserDataHelper.getInstance().getUserDataModel().get(0).getUserId()
         ), new Helper() {
             @Override

@@ -11,8 +11,7 @@ import android.widget.TextView;
 
 import com.bluewebspark.happyservice.R;
 import com.bluewebspark.happyservice.activity.HistoryDetailsActivity;
-import com.bluewebspark.happyservice.activity.OngoingDetailsActivity;
-import com.bluewebspark.happyservice.model.HistoryModel;
+import com.bluewebspark.happyservice.model.CompleteModel;
 import com.bluewebspark.happyservice.sohel.S;
 
 import java.util.List;
@@ -24,8 +23,8 @@ import butterknife.ButterKnife;
  * Created by androidsys1 on 8/15/2017.
  */
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHolder> {
-    List<HistoryModel> arrayList;
+public class CompleteAdapter extends RecyclerView.Adapter<CompleteAdapter.MyViewHolder> {
+    List<CompleteModel> arrayList;
     Context context;
     @BindView(R.id.tvServiceName)
     TextView tvServiceName;
@@ -34,7 +33,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     @BindView(R.id.mainLayout)
     RelativeLayout mainLayout;
 
-    public HistoryAdapter(Context context, List<HistoryModel> arrayList) {
+    public CompleteAdapter(Context context, List<CompleteModel> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
@@ -49,14 +48,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         context = parent.getContext();
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_history, parent, false);
+                .inflate(R.layout.item_complete, parent, false);
         ButterKnife.bind(this, itemView);
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        final HistoryModel model = arrayList.get(position);
+        final CompleteModel model = arrayList.get(position);
         tvServiceName.setText(model.getServiceName());
         tvTime.setText(model.getApproximateTime());
 
@@ -74,4 +73,5 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public int getItemCount() {
         return arrayList.size();
     }
+
 }

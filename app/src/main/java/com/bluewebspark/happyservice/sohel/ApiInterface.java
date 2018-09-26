@@ -2,7 +2,7 @@ package com.bluewebspark.happyservice.sohel;
 
 /**
  * Created by abc on 09-Mar-18.
- */
+ ***/
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -44,6 +44,7 @@ public interface ApiInterface {
     @GET("my_completed_service")
     Call<ResponseBody> my_completed_service(
             @Query("userID") String userID
+
     );
 
     @FormUrlEncoded
@@ -168,5 +169,15 @@ public interface ApiInterface {
     Call<ResponseBody> updateFcmID(
             @Query("user_id") String user_id,
             @Query("fcm_id") String fcm_id
+    );
+
+    @GET("my_cancelled_service")
+    Call<ResponseBody> my_cancelled_service(
+            @Query("userID") String userID
+    );
+
+    @GET("my_ongoing_service")
+    Call<ResponseBody> my_ongoing_service(
+            @Query("userID") String userID
     );
 }

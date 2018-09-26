@@ -7,17 +7,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
-
 import com.bluewebspark.happyservice.R;
+import com.bluewebspark.happyservice.fragment.CancelledFragment;
+import com.bluewebspark.happyservice.fragment.CompleteFragment;
 import com.bluewebspark.happyservice.fragment.OnGoingFragment;
-import com.bluewebspark.happyservice.fragment.HistoryFragment;
 import com.bluewebspark.happyservice.fragment.OpenFragment;
-
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 /**
  * Created by abc on 07-Mar-18.
  */
@@ -52,7 +50,8 @@ public class MyBookingActivity extends BaseActivity {
 
         adapter.addFrag(new OpenFragment(), "Open");
         adapter.addFrag(new OnGoingFragment(), "OnGoing");
-        adapter.addFrag(new HistoryFragment(), "History");
+        adapter.addFrag(new CompleteFragment(), "Completed");
+        adapter.addFrag(new CancelledFragment(), "Cancelled");
         viewPager.setAdapter(adapter);
     }
 

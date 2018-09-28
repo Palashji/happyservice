@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/serviceImage"
-            android:layout_width="@dimen/dimen_50dp"
-            android:layout_height="@dimen/dimen_50dp"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
             android:layout_margin="@dimen/small_margin" />

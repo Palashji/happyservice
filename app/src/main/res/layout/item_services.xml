@@ -29,10 +29,10 @@
                 <TextView
                     android:id="@+id/tvServiceName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:ellipsize="end"
-                    android:singleLine="true"
                     android:fontFamily="@font/helvetica_neue_bold"
+                    android:singleLine="true"
                     android:text="Service Name"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="@dimen/text_size_normal" />

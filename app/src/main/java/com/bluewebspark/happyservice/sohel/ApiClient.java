@@ -6,9 +6,14 @@ package com.bluewebspark.happyservice.sohel;
 
 import retrofit2.Retrofit;
 
+import static com.bluewebspark.happyservice.sohel.Const.URL.BASE_URL;
+
 public class ApiClient {
 
+
+    //    private static final String BASE_URL = "http://happyservice.in/index.php/api/";
     private static final String BASE_URL = "http://happyservice.in/index.php/api/";
+
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {
@@ -18,5 +23,6 @@ public class ApiClient {
                     .build();
         }
         return retrofit;
+
     }
 }

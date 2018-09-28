@@ -690,5 +690,6 @@ public class MainActivity extends AppCompatActivity
             if (!UserDataHelper.getInstance().getUserDataModel().get(0).getUserName().equals(""))
                 tvNamae.setText(UserDataHelper.getInstance().getUserDataModel().get(0).getUserName());
         }
+
     }
 }

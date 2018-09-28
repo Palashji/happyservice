@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -7,32 +8,66 @@
         <item
             android:id="@+id/nav_my_order"
             android:icon="@drawable/orders"
-            android:title="My Booking" />
+            android:title="My Booking"
+            app:actionLayout="@layout/layout" />
+    </group>
+
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_wallet"
             android:icon="@drawable/wallet"
+            android:title="Wallet"
             android:visible="false"
-            android:title="Wallet" />
+            app:actionLayout="@layout/layout" />
+    </group>
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_chat"
             android:icon="@drawable/ic_chat"
-            android:title="Chat" />
-        <item
-            android:visible="false"
-            android:id="@+id/nav_refer_earn"
-            android:icon="@drawable/earn"
-            android:title="Refer &amp; Earn" />
+            android:title="Chat"
+            app:actionLayout="@layout/layout" />
+    </group>
+    <item
+        android:id="@+id/nav_refer_earn"
+        android:icon="@drawable/earn"
+        android:title="Refer &amp; Earn"
+        android:visible="false"
+        app:actionLayout="@layout/layout" />
+    <group
+        android:id="@+id/grp3"
+        android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_notification"
             android:icon="@drawable/notification"
-            android:title="Notification" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_logout"
-            android:title="Logout" />
+            android:title="Notification"
+            app:actionLayout="@layout/layout" />
+    </group>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout"
+        app:actionLayout="@layout/layout" />
+    <group
+        android:id="@+id/grp4"
+        android:checkableBehavior="single">
+
+    </group>
+
+    <group
+        android:id="@+id/grp5"
+        android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/settings"
-            android:title="Help" />
+            android:title="Help"
+            app:actionLayout="@layout/layout" />
     </group>
 </menu>

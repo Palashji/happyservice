@@ -11,6 +11,7 @@
     <color name="textColorSecondry">#eb706e6e</color>
     <color name="white">#ffffff</color>
     <color name="bg_color">#E2E2E2</color>
+    <color name="bgs_color">#ccc7c7</color>
     <color name="error_color">#d10411</color>
     <color name="blue">#3a6fe2</color>
 </resources>
